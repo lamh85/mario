@@ -4,13 +4,30 @@ const Hero = class extends Sprite {
   constructor(options){
     super(options)
 
-    const {
-      name,
-      health
-    } = options
+    this.name = options.name
+    this.health = options.health
+    this.jumpHeight = options.jumpHeight
   }
 
-  healthChange() {
-    
+  healthChange(increment) {
+    this.healthChange += increment
+  }
+
+  livesChange(increment){
+    this.livesChange += increment
+  }
+
+  // Client-controller actions ===========
+
+  jump(){
+  }
+
+  squat(){
+  }
+
+  advance(){
+
   }
 }
+
+export default Hero
