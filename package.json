@@ -4,16 +4,20 @@
   "description": "Practicing my OOP by re-creating a Mario game.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel index.js",
+    "console": "babel repl.js",
+    "build-babel": "./node_modules/.bin/babel src --out-dir lib"
   },
-  "repository": {
-    "git@github.com:lamh85/mario.git"
-  },
+  "repository": "git@github.com:lamh85/mario.git",
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
-    "babel-core": "^6.26.3"
+    "@babel/preset-env": "^7.1.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
   }
 }
